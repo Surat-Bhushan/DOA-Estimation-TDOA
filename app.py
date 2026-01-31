@@ -69,17 +69,21 @@ section = st.sidebar.radio(
 )
 
 # ---------------- MAIN CONTENT ----------------
-if section == "Aim":
-    render_aim()
+content = st.empty()
 
-elif section == "Theory":
-    render_theory()
+with content.container():
+    if section == "Aim":
+        render_aim()
 
-elif section == "Procedure":
-    render_procedure()
+    elif section == "Theory":
+        render_theory()
 
-elif section == "Simulation":
-    render_simulation()
+    elif section == "Procedure":
+        render_procedure()
+
+    elif section == "Simulation":
+        render_simulation()
+
 
 st.markdown(
     """
