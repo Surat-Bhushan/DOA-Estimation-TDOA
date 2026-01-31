@@ -10,33 +10,24 @@ def render_theory():
         st.markdown("</div>", unsafe_allow_html=True)
 
     def styled_image(url, caption):
-        st.markdown(
-            """
-            <div style="
-                border:.3px solid #cccccc;
-                padding:2px;
-                background-color:#fafafa;
-                margin:20px 0;
-                text-align:center;">
-            """,
-            unsafe_allow_html=True,
-        )
-        col1, col2, col3 = st.columns([1, 3, 1])
-        with col2:
-            st.image(url, use_container_width=True, caption=caption)
-        st.markdown("</div>", unsafe_allow_html=True)
-        st.markdown(
-            """
-            <div style="
-                border:.3px solid #cccccc;
-                padding:2px;
-                background-color:#fafafa;
-                margin:20px 0;
-                text-align:center;">
-            """,
-            unsafe_allow_html=True,
-        )
-        st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div style="
+            border:0.3px solid #cccccc;
+            padding:6px;
+            background-color:#fafafa;
+            margin:20px 0;
+            text-align:center;">
+        """,
+        unsafe_allow_html=True,
+    )
+
+    col1, col2, col3 = st.columns([1, 3, 1])
+    with col2:
+        st.image(url, use_container_width=True, caption=caption)
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
 
     # ---------------- DOA ----------------
     section_start()
