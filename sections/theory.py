@@ -9,7 +9,7 @@ def render_theory():
     def section_end():
         st.markdown("</div>", unsafe_allow_html=True)
 
-     def styled_image(url, caption):
+    def styled_image(url, caption):
         st.markdown(
             """
             <div style="
