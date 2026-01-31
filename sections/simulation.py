@@ -5,6 +5,29 @@ import matplotlib.pyplot as plt
 from signal_model import generate_time_axis, generate_signals
 from doa_algorithm import bandpass_filter, estimate_tdoa_phase, tdoa_to_doa
 
+st.markdown(
+    """
+    <style>
+    .doa-result {
+        background-color: #f7f7f7;
+        color: #000000;
+        padding: 15px;
+        border-left: 5px solid #1f77b4;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .doa-result {
+            background-color: #1e2a38;
+            color: #eaeaea;
+            border-left: 5px solid #4da3ff;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 def obs_box(text):
     st.markdown(
@@ -157,15 +180,12 @@ def render_simulation():
         st.subheader("Estimated Direction of Arrival")
 
         st.markdown(
-            f"""
-            <div style="
-                background-color:#f7f7f7;
-                padding:15px;
-                border-left:5px solid #1f77b4;
-                font-size:18px;">
-            <b>Given Source Angle:</b> {theta:.2f}° <br>
-            <b>Estimated DOA:</b> {theta_est:.2f}°
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
+    f"""
+    <div class="doa-result">
+        <b>Given Source Angle:</b> {theta:.2f}° <br>
+        <b>Estimated DOA:</b> {theta_est:.2f}°
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
