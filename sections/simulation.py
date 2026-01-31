@@ -113,7 +113,18 @@ def render_simulation():
         ax2.legend()
         st.pyplot(fig2)
         obs_box("Signal appears as a narrowband peak; noise is broadband.")
+        # -------- TIME DOMAIN (FILTERED) --------
+        fig_td_filt, ax_td_filt = plt.subplots(figsize=(7, 3))
+        ax_td_filt.plot(t[:1500], x1f[:1500], label="Sensor 1 (filtered)")
+        ax_td_filt.plot(t[:1500], x2f[:1500], label="Sensor 2 (filtered)")
+        ax_td_filt.set_title("Filtered Time-Domain Signals")
+        ax_td_filt.legend()
+        st.pyplot(fig_td_filt)
 
+        obs_box(
+            "After band-pass filtering, noise is reduced but the time delay is still "
+            "too small to observe directly in the time domain."
+        )
         # -------- FREQ DOMAIN (FILTERED) --------
         X1f = np.fft.fft(x1f)
         X2f = np.fft.fft(x2f)
