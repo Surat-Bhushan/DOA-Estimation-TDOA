@@ -81,3 +81,28 @@ elif section == "Procedure":
 elif section == "Simulation":
     render_simulation()
 
+st.markdown(
+    """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f9f9f9;
+        color: #555;
+        text-align: center;
+        padding: 6px;
+        font-size: 13px;
+        border-top: 1px solid #e0e0e0;
+        z-index: 100;
+    }
+    </style>
+
+    <div class="footer">
+        Developed by <b>Surat Bhushan @2026</b> 
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
