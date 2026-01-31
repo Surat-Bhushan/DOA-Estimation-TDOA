@@ -180,12 +180,12 @@ def render_simulation():
         st.subheader("Estimated Direction of Arrival")
 
         st.markdown(
-    f"""
-    <div class="doa-result">
-        <b>Given Source Angle:</b> {theta:.2f}° <br>
-        <b>Estimated DOA:</b> {theta_est:.2f}°
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+            f"""
+            <div class="doa-result">
+                <b>Given Source Angle:</b> {theta:.2f}° <br>
+                <b>Estimated DOA:</b> {theta_est:.2f}°
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
