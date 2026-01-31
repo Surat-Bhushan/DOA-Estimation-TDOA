@@ -63,17 +63,19 @@ def render_simulation():
         st.latex(r"\Delta t = \frac{d \sin(\theta)}{c}")
 
         st.markdown(
-            """
-            <div class="section-text">
-            <ul>
-                <li><b>d</b> must be small enough to avoid phase ambiguity.</li>
-                <li>Large <b>d</b> increases delay but worsens phase wrapping.</li>
-                <li><b>T</b> must be long enough to ensure good frequency resolution.</li>
-            </ul>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
+                """
+                <div class="section-text">
+                <ul>
+                    <li><b>d</b> must be smaller than half the wavelength to avoid angle ambiguity.</li>
+                    <li>Large <b>d</b> causes different angles to produce the same phase difference.</li>
+                    <li><b>T</b> should be long enough for accurate phase estimation.</li>
+                    <li>Very large <b>T</b> increases noise effects and reduces real-time response.</li>
+                </ul>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
 
     # ---------------- STEP 3 ----------------
     st.subheader("Run Simulation")
