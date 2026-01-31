@@ -117,7 +117,7 @@ def render_simulation():
         fig_td_filt, ax_td_filt = plt.subplots(figsize=(7, 3))
         ax_td_filt.plot(t[:1500], x1f[:1500], label="Sensor 1 (filtered)")
         ax_td_filt.plot(t[:1500], x2f[:1500], label="Sensor 2 (filtered)")
-        ax_td_filt.set_title("Filtered Time-Domain Signals")
+        ax_td_filt.set_title("Time-Domain (After Filtering)")
         ax_td_filt.legend()
         st.pyplot(fig_td_filt)
 
