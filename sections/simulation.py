@@ -9,17 +9,34 @@ from doa_algorithm import bandpass_filter, estimate_tdoa_phase, tdoa_to_doa
 def obs_box(text):
     st.markdown(
         f"""
-        <div style="
-            background-color:#e8f2fb;
-            padding:10px;
-            border-left:4px solid #1f77b4;
-            margin-bottom:20px;
-            font-size:15px;">
-        <b>Observation:</b> {text}
+        <style>
+        /* Light mode */
+        .obs-box {{
+            background-color: #e8f2fb;
+            color: #000000;
+            padding: 10px;
+            border-left: 4px solid #1f77b4;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }}
+
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {{
+            .obs-box {{
+                background-color: #1e2a38;
+                color: #eaeaea;
+                border-left: 4px solid #4da3ff;
+            }}
+        }}
+        </style>
+
+        <div class="obs-box">
+            <b>Observation:</b> {text}
         </div>
         """,
         unsafe_allow_html=True,
     )
+
 
 
 def render_simulation():
@@ -117,7 +134,7 @@ def render_simulation():
         fig_td_filt, ax_td_filt = plt.subplots(figsize=(7, 3))
         ax_td_filt.plot(t[:1500], x1f[:1500], label="Sensor 1 (filtered)")
         ax_td_filt.plot(t[:1500], x2f[:1500], label="Sensor 2 (filtered)")
-        ax_td_filt.set_title("Time-Domain (After Filtering)")
+        ax_td_filt.set_title("Filtered Time-Domain Signals")
         ax_td_filt.legend()
         st.pyplot(fig_td_filt)
 
