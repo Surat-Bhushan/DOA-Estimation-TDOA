@@ -35,20 +35,7 @@ This project estimates phase difference around the signal frequency and converts
 
 ## Project Structure
 
-.
-├── app.py # Streamlit main application
-├── sections/
-│ ├── aim.py # Aim of the experiment
-│ ├── theory.py # Theory explanation
-│ ├── procedure.py # Step-by-step procedure
-│ └── simulation.py # Interactive simulation logic
-│
-├── signal_model.py # Signal generation and noise model
-├── doa_algorithm.py # Filtering, TDOA, and DOA estimation
-├── main.py # Standalone experiment (CLI + plots)
-├── requirements.txt
-└── README.md
-
+<img width="521" height="251" alt="Screenshot 2026-04-03 at 2 22 56 PM" src="https://github.com/user-attachments/assets/4c178466-8a6a-405e-a6d1-48414b1096b7" />
 
 ---
 
