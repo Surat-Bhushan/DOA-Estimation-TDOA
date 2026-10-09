@@ -7,6 +7,8 @@ This project is an interactive virtual laboratory for estimating the **Direction
 
 The lab demonstrates how extremely small **time delays** between sensors can be estimated using **phase-based Time Difference of Arrival (TDOA)**, even in the presence of noise.
 
+It enables real-time exploration of how noise, sensor spacing, and source angle affect estimation accuracy. Implemented bandpass filtering, frequency-domain phase correlation with real-time visualisation and validation against ground truth. 
+
 The project is implemented using:
 - Python for signal processing
 - Streamlit for interactive visualization
